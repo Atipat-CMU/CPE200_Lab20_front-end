@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     if (!client) {
       const client = new Client({
-        brokerURL: "ws://localhost/tic-tac-toe",
+        brokerURL: "ws://localhost:8080/tic-tac-toe",
         onConnect: () => {
           client.subscribe("/app/game", (message) => {
             const body = JSON.parse(message.body);
